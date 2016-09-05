@@ -9,7 +9,7 @@
 - name: Reload shell
   shell: source ~/.zshrc
 - name: create the install location for rubies
-  shell: mkdir -p ~/.rbenv/versions
+  file: path=~/.rbenv/versions state=directory
 - name: Install rbenv-bundler
   homebrew: name=rbenv-bundler state=present
 - name: Create rbenv plugins directory
